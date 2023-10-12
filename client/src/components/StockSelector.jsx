@@ -9,7 +9,7 @@ export const StockSelector = ({ data, selectStock }) => {
   };
 
   return (
-    <div className="relative inline-block text-left">
+    <div className="mt-20 relative inline-block text-left">
       <button
         onClick={toggleDropdown}
         className="bg-green-500 text-white font-semibold py-2 px-4 rounded inline-flex items-center"
