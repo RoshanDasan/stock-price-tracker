@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import { StockSelector } from "./components/StockSelector";
+import PriceDisplay from "./components/PriceDisplay";
+const stockData = [
+  { name: "Google", price: 500.4 },
+  { name: "Apple", price: 450.3 },
+  { name: "Microsoft", price: 399.7 },
+  { name: "Tata", price: 550.9 },
+  { name: "Toyota", price: 800.9 },
+  { name: "Samsung", price: 400.9 },
+];
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [selectedStock, setSelectedStock] = useState({});
+  const selectStock = (stock) => {
+    setSelectedStock(stock);
+  };
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="flex flex-col items-center p-5 bg-black">
+        <h1>Stock selector</h1>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className="flex flex-col items-center h-screen bg-zinc-900">
+        <PriceDisplay stock={selectedStock} />
+        <StockSelector data={stockData} selectStock={selectStock} />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
