@@ -12,7 +12,7 @@ Installation
    Navigate to the project directory:
 
 
-    cd Connectify
+    cd stock-price-tracker
 
    Install dependencies for the backend:
     
