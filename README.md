@@ -29,15 +29,11 @@ Installation
 Usage
 
    Start the backend server:
-
-
-    cd server
+   
     yarn dev
 
    Start the frontend development server:
-
-
-    cd client
+   
     yarn dev
 
    Open your browser and navigate 
