@@ -1,7 +1,7 @@
 # stock-price-tracker
 
 I developed a stock price tracker web application designed to monitor stock price changes. Users can view available stocks, check their prices, add stocks to their cart, and make purchases if the prices is in your budget. 
-The application was built using ReactJS for the frontend and NodeJS for the backend. MongoDB was utilized for data storage.
+The application was built using ReactJS for the frontend and NodeJS for the backend. MongoDB was utilized for data storage and for styling used Tailwindcss.
 
 Installation
 
