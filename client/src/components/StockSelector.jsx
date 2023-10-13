@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 export const StockSelector = ({ data, selectStock }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [stocks, setStocks] = useState(data);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -38,7 +37,7 @@ export const StockSelector = ({ data, selectStock }) => {
             aria-orientation="vertical"
             aria-labelledby="options-menu"
           >
-            {stocks.map((stock, index) => (
+            {data.map((stock, index) => (
               <a
                 key={index}
                 className="block px-4 py-2 cursor-pointer"

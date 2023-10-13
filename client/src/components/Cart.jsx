@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Cart({ cart, removeCartElement, cartTotal }) {
+function Cart({ cart, removeCartElement, cartTotal, buyStock }) {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   return (
@@ -62,8 +62,14 @@ function Cart({ cart, removeCartElement, cartTotal }) {
               </div>
             ))}
           </ul>
-          <div className="flex justify-end p-5">
+          <div className="flex flex-col justify-end p-5">
             <h1>Total Price : {cartTotal()}</h1>
+            <button
+              class="mt-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+              onClick={buyStock}
+            >
+              Buy stock
+            </button>
           </div>
         </div>
       )}

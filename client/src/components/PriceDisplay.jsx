@@ -1,7 +1,7 @@
 import React from "react";
 
 const PriceDisplay = ({ stock, setCart, cart }) => {
-  const isItemInCart = cart.some((element) => element.name === stock.name);
+  const isItemInCart = cart.some((element) => element.name === stock.name); // finding if stock is already in cart
 
   return (
     <>

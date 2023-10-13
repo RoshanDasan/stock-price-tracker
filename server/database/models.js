@@ -1,5 +1,6 @@
 import { Schema, model } from "mongoose";
 
+// schema for stock
 const stockShema = new Schema({
   name: {
     type: String,
