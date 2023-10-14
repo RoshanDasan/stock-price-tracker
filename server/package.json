@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "build": "yarn install"
   },
   "dependencies": {
     "cors": "^2.8.5",
